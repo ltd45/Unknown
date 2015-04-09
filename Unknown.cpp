@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <cmath>
 #include <map>
 #include <cmath>
 using namespace std;
@@ -73,60 +74,97 @@ string ALU(string A, string B, string control){
 	long int valueA, valueB, result;
 	valueA = string_to_int(A);
 	valueB = string_to_int(B);
+	cout << valueB << endl;
 	
-	switch(control){
-		case "000":
-			result = valueA + valueB;
-			return int_to_string(result);
-		case "001": /*nor*/
-			string binResult = "1111111111111111";
-			for(int i=0; i<16; i++){
-				if((A[i] == "1") || (B[i] == "1")){
-					binResult[i] = "0";
-				}
-			}
-			return binResult;
-		case "010":
-			result = valueA - valueB;
-			return int_to_string(result);
-		case "011": /*and*/
-			string binResult = "0000000000000000";
-			for(int i=0; i<16; i++){
-				if((A[i] == "1") && (B[i] == "1")){
-					binResult[i] = "1";
-				}
-			}
-			return binResult;
-		case "100": /*sll*/
-			string binResult = "0000000000000000";
-			for(int j=0; j<valueB; j++){
-				for(int i=0; i<15; i++){
-					binResult[i] = A[i+1];
-				}
-				binResult[15] = "0";
-			}
-			return binResult;
-		case "101": /*or*/
-			string binResult = "0000000000000000";
-			for(int i=0; i<16; i++){
-				if((A[i] == "1") || (B[i] == "1")){
-					binResult[i] = "0";
-				}
-			}
-			return binResult;
-		case "110": /*srl*/
-			
-		case "111":
-			if(valueA < valueB){
-				return "0000000000000001";
-			}
-			else{
-				return "0000000000000000";
-			}
+	if(control == "000"){
+		result = valueA + valueB;
+		return int_to_string(result);
 	}
-	
+	else if(control == "001"){
+		string binResult = "1111111111111111";
+		for(int i=0; i<16; i++){
+			if((A.substr(i, 1) == "1") || (B.substr(i, 1) == "1")){
+				binResult.replace(i, 1, "0");
+			}
+		}
+		return binResult;
+	}
+	else if(control == "010"){
+		result = valueA - valueB;
+		return int_to_string(result);
+	}
+	else if(control == "011"){
+		string binResult = "0000000000000000";
+		for(int i=0; i<16; i++){
+			if((A.substr(i, 1) == "1") && (B.substr(i, 1) == "1")){
+				binResult.replace(i, 1, "1");
+			}
+		}
+		return binResult;
+	}
+	else if(control == "100"){
+		string binResult = "0000000000000000";
+		for(int j=0; j<valueB; j++){
+			for(int i=0; i<15; i++){
+				binResult[i] = A[i+1];
+			}
+			binResult.replace(15, 1, "0");
+			A = binResult;
+		}
+		return A;
+	}
+	else if(control == "101"){
+		string binResult = "0000000000000000";
+		for(int i=0; i<16; i++){
+			if((A.substr(i, 1) == "1") || (B.substr(i, 1) == "1")){
+				binResult.replace(i, 1, "1");
+			}
+		}
+		return binResult;
+	}
+	else if(control == "110"){
+		string binResult = "0000000000000000";
+		for(int j=0; j<valueB; j++){
+			for(int i=1; i<16; i++){
+				binResult[i] = A[i-1]; 
+			}
+			binResult.replace(0, 1, "0");
+			A = binResult;
+		}
+		return A;
+	}
+	else if(control == "111"){
+		if(valueA < valueB){
+			return "0000000000000001";
+		}
+		else{
+			return "0000000000000000";
+		}
+	}
 }
 
+string sign_extend(string binString){
+	if(binString.substr(0,1) == "0"){
+		binString = "0000000000" + binString;
+	}
+	else{
+		binString = "1111111111" + binString;
+	}
+	return binString;
+}
+
+string shift_left_one(string binString){
+	string binResult = "0000000000000000";
+	for(int i=0; i<15; i++){
+		binResult[i] = binString[i+1];
+	}
+	binResult.replace(15, 1, "0");
+	return binResult;
+}
+
+string ALU_control(string ALUopp, string function){
+	return ALUopp;
+}
 int main()
 {
 Instruction_Memory myMemory;
@@ -137,6 +175,11 @@ Double_Mux myDMux;
 Buffer myBuff;
 Control myControl;
 
+string A = "0000000000001000";
+string B = "0000000001000011";
+string opp = "111";
+
+cout << ALU(A, B, opp) << endl;
 /*
 myControl.decodeOpp("0010");
 cout << myControl.regDest << endl;
