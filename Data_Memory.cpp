@@ -4,6 +4,7 @@
 #include <map>
 #include <cmath>
 #include "Data_Memory.h"
+#include "Unknown.h"
 
 Data_Memory::Data_Memory() {
     for(int i=0; i<200; i++){

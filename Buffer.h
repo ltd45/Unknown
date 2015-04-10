@@ -6,7 +6,7 @@
 
 #ifndef BUFFER_H
 #define	BUFFER_H
-
+using std::string;
 class Buffer {
     string oldBuff;
     string newBuff;

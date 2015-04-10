@@ -7,6 +7,7 @@
 #ifndef DOUBLE_MUX_H
 #define	DOUBLE_MUX_H
 
+using std::string;
 class Double_Mux {
     string control;
 public:

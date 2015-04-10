@@ -14,7 +14,7 @@
 #define	CONTROL_H
 
 using std::string;
-
+using std::map;
 class Control {
     string regDest;
     string regWrite;

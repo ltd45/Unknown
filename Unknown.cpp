@@ -4,6 +4,7 @@
 #include <cmath>
 #include <map>
 #include <cmath>
+#include "Unknown.h"
 using namespace std;
 
 /*Function to change 16 bit 2's complement binary string to a signed integer*/
@@ -164,35 +165,4 @@ string shift_left_one(string binString){
 
 string ALU_control(string ALUopp, string function){
 	return ALUopp;
-}
-int main()
-{
-Instruction_Memory myMemory;
-Register_Memory myReg;
-Data_Memory myData;
-Mux myMux;
-Double_Mux myDMux;
-Buffer myBuff;
-Control myControl;
-
-string A = "0000000000001000";
-string B = "0000000001000011";
-string opp = "111";
-
-cout << ALU(A, B, opp) << endl;
-/*
-myControl.decodeOpp("0010");
-cout << myControl.regDest << endl;
-cout << myControl.regWrite << endl;
-cout << myControl.ALUsrc << endl;
-cout << myControl.Jump << endl;
-cout << myControl.Branch << endl;
-cout << myControl.PCsrc << endl;
-cout << myControl.ALUopp << endl;
-cout << myControl.memWrite << endl;
-cout << myControl.memRead << endl;
-cout << myControl.memToReg << endl;
-*/
-	
-return 0;
 }

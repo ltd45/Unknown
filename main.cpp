@@ -19,6 +19,7 @@
 #include "Instruction_Memory.h"
 #include "Mux.h"
 #include "Register_Memory.h"
+#include "Unknown.h"
 
 using namespace std;
 
@@ -37,7 +38,8 @@ int main(int argc, char** argv) {
     string A = "0000000000001000";
     string B = "0000000001000011";
     string opp = "111";
-    cout << ALU(A, B, opp) << endl;
+    string alu = ALU(A, B, opp);
+    cout << alu << endl;
 /*
 myControl.decodeOpp("0010");
 cout << myControl.regDest << endl;

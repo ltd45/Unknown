@@ -35,14 +35,15 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/738147432/Unknown.o \
 	${OBJECTDIR}/Buffer.o \
 	${OBJECTDIR}/Control.o \
 	${OBJECTDIR}/Data_Memory.o \
 	${OBJECTDIR}/Double_Mux.o \
 	${OBJECTDIR}/Instruction_Memory.o \
 	${OBJECTDIR}/Mux.o \
-	${OBJECTDIR}/Register_Memory.o
+	${OBJECTDIR}/Register_Memory.o \
+	${OBJECTDIR}/Unknown.o \
+	${OBJECTDIR}/main.o
 
 
 # C Compiler Flags
@@ -68,10 +69,6 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/unknown.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/unknown ${OBJECTFILES} ${LDLIBSOPTIONS}
-
-${OBJECTDIR}/_ext/738147432/Unknown.o: nbproject/Makefile-${CND_CONF}.mk ../../../Desktop/Unknown/Unknown.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/738147432
-	$(COMPILE.cc) -g -o ${OBJECTDIR}/_ext/738147432/Unknown.o ../../../Desktop/Unknown/Unknown.cpp
 
 ${OBJECTDIR}/Buffer.o: nbproject/Makefile-${CND_CONF}.mk Buffer.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -100,6 +97,14 @@ ${OBJECTDIR}/Mux.o: nbproject/Makefile-${CND_CONF}.mk Mux.cpp
 ${OBJECTDIR}/Register_Memory.o: nbproject/Makefile-${CND_CONF}.mk Register_Memory.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	$(COMPILE.cc) -g -o ${OBJECTDIR}/Register_Memory.o Register_Memory.cpp
+
+${OBJECTDIR}/Unknown.o: nbproject/Makefile-${CND_CONF}.mk Unknown.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	$(COMPILE.cc) -g -o ${OBJECTDIR}/Unknown.o Unknown.cpp
+
+${OBJECTDIR}/main.o: nbproject/Makefile-${CND_CONF}.mk main.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	$(COMPILE.cc) -g -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:

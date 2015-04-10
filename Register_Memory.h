@@ -6,6 +6,7 @@
 #ifndef REGISTER_MEMORY_H
 #define	REGISTER_MEMORY_H
 
+using std::string;
 class Register_Memory {
     string Memory_Array[8];
 public:

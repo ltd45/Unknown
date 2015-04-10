@@ -1,11 +1,5 @@
 #include "Instruction_Memory.h"
-
-
-Instruction_Memory::Instruction_Memory() {
-}
-
-Instruction_Memory::Instruction_Memory(const Instruction_Memory& orig) {
-}
+#include "Unknown.h"
 
 Instruction_Memory::Instruction_Memory(){
 	for(int i=0; i<200; i++){

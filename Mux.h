@@ -6,7 +6,7 @@
 
 #ifndef MUX_H
 #define	MUX_H
-
+using std::string;
 class Mux {
     string control;
 public:
