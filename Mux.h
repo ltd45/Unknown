@@ -1,24 +1,23 @@
-#include <iostream>
-#include <string>
-#include <cstdlib>
-#include <map>
-#include <cmath>
+/* 
+ * File:   Mux.h
+ * Author: Peter
+ *
+ * Created on April 13, 2015, 2:20 AM
+ */
 
 #ifndef MUX_H
 #define	MUX_H
-using std::string;
-class Mux {
-    string control;
-public:
-    Mux();
-    Mux(const Mux& orig);
-    virtual ~Mux();
-    void set_control(string);
-    string get_output(string, string);
-private:
 
+#include <string>
+using namespace std;
+
+class Mux{
+		string control;
+	public:
+		Mux();
+		void set_control(string);
+		string get_output(string, string);
 };
-
 
 #endif	/* MUX_H */
 

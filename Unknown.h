@@ -1,20 +1,19 @@
 /* 
  * File:   Unknown.h
- * Author: ltd45_000
+ * Author: Peter
  *
- * Created on April 9, 2015, 6:30 PM
+ * Created on April 13, 2015, 2:29 PM
  */
-#include <iostream>
 #include <string>
-#include <cstdlib>
-#include <map>
-#include <cmath>
 
+using namespace std;
 #ifndef UNKNOWN_H
 #define	UNKNOWN_H
 
-using std::string;
 
+long int string_to_unsigned(string);
+string bin_to_hex(string);
+string int_to_three_bit(int);
 long int string_to_int(string);
 string int_to_string(long int);
 string ALU(string, string, string);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="89">
+<configurationDescriptor version="94">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -10,6 +10,7 @@
       <itemPath>Double_Mux.h</itemPath>
       <itemPath>Instruction_Memory.h</itemPath>
       <itemPath>Mux.h</itemPath>
+      <itemPath>Processor.h</itemPath>
       <itemPath>Register_Memory.h</itemPath>
       <itemPath>Unknown.h</itemPath>
     </logicalFolder>
@@ -26,6 +27,7 @@
       <itemPath>Double_Mux.cpp</itemPath>
       <itemPath>Instruction_Memory.cpp</itemPath>
       <itemPath>Mux.cpp</itemPath>
+      <itemPath>Processor.cpp</itemPath>
       <itemPath>Register_Memory.cpp</itemPath>
       <itemPath>Unknown.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
@@ -46,15 +48,11 @@
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
-        <dependencyChecking>false</dependencyChecking>
-        <rebuildPropChanged>true</rebuildPropChanged>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
-        <ccTool>
-          <commandlineTool>g++</commandlineTool>
-        </ccTool>
       </compileType>
       <item path="Buffer.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -80,6 +78,10 @@
       </item>
       <item path="Mux.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Processor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Processor.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Register_Memory.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Register_Memory.h" ex="false" tool="3" flavor2="0">
@@ -93,10 +95,9 @@
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
-        <dependencyChecking>false</dependencyChecking>
-        <rebuildPropChanged>true</rebuildPropChanged>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
         <cTool>
@@ -135,6 +136,10 @@
       <item path="Mux.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Mux.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Processor.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Processor.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Register_Memory.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -1,16 +1,24 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <cstdlib>
+#include <cmath>
+#include <map>
 #include "Buffer.h"
+#include "Unknown.h"
+using namespace std;
 
-Buffer::Buffer() {
-    oldBuff = "0000000000000000000000000";
-    newBuff = "0000000000000000000000000";
+Buffer::Buffer(){
+	oldBuff = "";
+	newBuff = "";
 }
 
-Buffer::Buffer(const Buffer& orig) {
+void Buffer::set_size(int length){
+	for(int i=0; i<length; i++){
+		oldBuff = oldBuff + "0";
+		newBuff = newBuff + "0";
+	}
 }
-
-Buffer::~Buffer() {
-}
-
 void Buffer::set_newBuff(string newString){
 	newBuff = newString;
 }

@@ -1,11 +1,46 @@
 #include <iostream>
-#include <string>
 #include <cstdlib>
 #include <cmath>
 #include <map>
-#include <cmath>
+#include <string>
 #include "Unknown.h"
+
 using namespace std;
+long int string_to_unsigned(string binString){
+	const char * c = binString.c_str();
+	char * pEnd;
+	long int myNum = strtol(c, &pEnd, 2);
+	return myNum;
+}
+
+string bin_to_hex(string binNum){
+	string hexArray[16] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"};
+	string hexOne = hexArray[string_to_unsigned(binNum.substr(0,4))];
+	string hexTwo = hexArray[string_to_unsigned(binNum.substr(4,4))];
+	string hexThree = hexArray[string_to_unsigned(binNum.substr(8,4))];
+	string hexFour = hexArray[string_to_unsigned(binNum.substr(12,4))];
+	string fullHex = hexOne + hexTwo + hexThree + hexFour;
+	return fullHex;
+}
+
+string int_to_three_bit(int myNum){
+	string binNum = "";
+	while(myNum > 0){
+		if((myNum % 2) == 1){
+			binNum = "1" + binNum;
+		}
+		else{
+			binNum = "0" + binNum;
+		}
+		myNum = floor(myNum / 2);
+	}
+	int fillCount = 3 - binNum.length();
+	
+	for(int i=0; i < fillCount; i++){
+		binNum = "0" + binNum;
+	}
+	return binNum;
+}
 
 /*Function to change 16 bit 2's complement binary string to a signed integer*/
 long int string_to_int(string binString){
@@ -66,16 +101,10 @@ string int_to_string(long int myNum){
 	
 }
 
-
-
-
-
-
 string ALU(string A, string B, string control){
 	long int valueA, valueB, result;
 	valueA = string_to_int(A);
 	valueB = string_to_int(B);
-	cout << valueB << endl;
 	
 	if(control == "000"){
 		result = valueA + valueB;
@@ -101,6 +130,7 @@ string ALU(string A, string B, string control){
 				binResult.replace(i, 1, "1");
 			}
 		}
+		cout << binResult << endl;
 		return binResult;
 	}
 	else if(control == "100"){
@@ -153,6 +183,7 @@ string sign_extend(string binString){
 	}
 	return binString;
 }
+
 
 string shift_left_one(string binString){
 	string binResult = "0000000000000000";

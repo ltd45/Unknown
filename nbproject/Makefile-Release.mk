@@ -21,7 +21,7 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=Cygwin-Windows
+CND_PLATFORM=Cygwin_4.x-Windows
 CND_DLIB_EXT=dll
 CND_CONF=Release
 CND_DISTDIR=dist
@@ -41,6 +41,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Double_Mux.o \
 	${OBJECTDIR}/Instruction_Memory.o \
 	${OBJECTDIR}/Mux.o \
+	${OBJECTDIR}/Processor.o \
 	${OBJECTDIR}/Register_Memory.o \
 	${OBJECTDIR}/Unknown.o \
 	${OBJECTDIR}/main.o
@@ -64,47 +65,61 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/unknown.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/computerarchproject.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/unknown.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/computerarchproject.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/unknown ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/computerarchproject ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/Buffer.o: nbproject/Makefile-${CND_CONF}.mk Buffer.cpp 
+${OBJECTDIR}/Buffer.o: Buffer.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/Buffer.o Buffer.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Buffer.o Buffer.cpp
 
-${OBJECTDIR}/Control.o: nbproject/Makefile-${CND_CONF}.mk Control.cpp 
+${OBJECTDIR}/Control.o: Control.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/Control.o Control.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Control.o Control.cpp
 
-${OBJECTDIR}/Data_Memory.o: nbproject/Makefile-${CND_CONF}.mk Data_Memory.cpp 
+${OBJECTDIR}/Data_Memory.o: Data_Memory.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/Data_Memory.o Data_Memory.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Data_Memory.o Data_Memory.cpp
 
-${OBJECTDIR}/Double_Mux.o: nbproject/Makefile-${CND_CONF}.mk Double_Mux.cpp 
+${OBJECTDIR}/Double_Mux.o: Double_Mux.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/Double_Mux.o Double_Mux.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Double_Mux.o Double_Mux.cpp
 
-${OBJECTDIR}/Instruction_Memory.o: nbproject/Makefile-${CND_CONF}.mk Instruction_Memory.cpp 
+${OBJECTDIR}/Instruction_Memory.o: Instruction_Memory.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/Instruction_Memory.o Instruction_Memory.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Instruction_Memory.o Instruction_Memory.cpp
 
-${OBJECTDIR}/Mux.o: nbproject/Makefile-${CND_CONF}.mk Mux.cpp 
+${OBJECTDIR}/Mux.o: Mux.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/Mux.o Mux.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Mux.o Mux.cpp
 
-${OBJECTDIR}/Register_Memory.o: nbproject/Makefile-${CND_CONF}.mk Register_Memory.cpp 
+${OBJECTDIR}/Processor.o: Processor.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/Register_Memory.o Register_Memory.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Processor.o Processor.cpp
 
-${OBJECTDIR}/Unknown.o: nbproject/Makefile-${CND_CONF}.mk Unknown.cpp 
+${OBJECTDIR}/Register_Memory.o: Register_Memory.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/Unknown.o Unknown.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Register_Memory.o Register_Memory.cpp
 
-${OBJECTDIR}/main.o: nbproject/Makefile-${CND_CONF}.mk main.cpp 
+${OBJECTDIR}/Unknown.o: Unknown.cpp 
 	${MKDIR} -p ${OBJECTDIR}
-	$(COMPILE.cc) -O2 -o ${OBJECTDIR}/main.o main.cpp
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Unknown.o Unknown.cpp
+
+${OBJECTDIR}/main.o: main.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:
@@ -112,7 +127,12 @@ ${OBJECTDIR}/main.o: nbproject/Makefile-${CND_CONF}.mk main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/unknown.exe
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/computerarchproject.exe
 
 # Subprojects
 .clean-subprojects:
+
+# Enable dependency checking
+.dep.inc: .depcheck-impl
+
+include .dep.inc

@@ -1,38 +1,30 @@
 /* 
  * File:   Control.h
- * Author: ltd45_000
+ * Author: Peter
  *
- * Created on April 9, 2015, 6:09 PM
+ * Created on April 13, 2015, 2:17 AM
  */
-#include <iostream>
-#include <string>
-#include <cstdlib>
-#include <map>
-#include <cmath>
 
 #ifndef CONTROL_H
 #define	CONTROL_H
 
-using std::string;
-using std::map;
-class Control {
-    string regDest;
-    string regWrite;
-    string ALUsrc;
-    string Jump;
-    string Branch;
-    string PCsrc;
-    string ALUopp;
-    string memWrite;
-    string memRead;
-    string memToReg;
-public:
-    Control();
-    Control(const Control& orig);
-    virtual ~Control();
-    void decodeOpp(string);
-private:
+#include <string>
+using namespace std;
 
+class Control{
+	public:
+		Control();
+		string regDest;
+		string regWrite;
+		string ALUsrc;
+		string Jump;
+		string Branch;
+		string PCsrc;
+		string ALUopp;
+		string memWrite;
+		string memRead;
+		string memToReg;
+		void decodeOpp(string);
 };
 
 #endif	/* CONTROL_H */
