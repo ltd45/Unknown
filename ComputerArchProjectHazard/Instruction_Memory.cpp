@@ -7,7 +7,7 @@
 #include "Instruction_Memory.h"
 #include "Unknown.h"
 using namespace std;
-
+//class to handle instruction memory module.
 Instruction_Memory::Instruction_Memory(){
 	for(int i=0; i<200; i++){
 		Memory_Array[i] = "00000000";

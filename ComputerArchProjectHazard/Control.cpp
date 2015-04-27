@@ -7,7 +7,7 @@
 #include "Control.h"
 #include "Unknown.h"
 using namespace std;
-
+//class for the control signals.
 Control::Control(){
 	regDest = "0";
 	regWrite = "0";

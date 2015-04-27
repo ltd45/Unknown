@@ -15,7 +15,7 @@
 #include "Unknown.h"
 #include "Forwarding.h"
 using namespace std;
-
+//instruction fetch.
 void Processor::IF(){
 	string newInstruction = instMem.get_instruction(PC);
 	string writeToBuff;
@@ -24,7 +24,7 @@ void Processor::IF(){
 	writeToBuff = PC + newInstruction;
 	IFID.set_newBuff(writeToBuff);
 }
-
+//instruction decode
 void Processor::ID(){
 	string fromBuffer = IFID.get_oldBuff();
 	string readRegOne = fromBuffer.substr(20,3);
@@ -78,7 +78,7 @@ void Processor::ID(){
         }
 	currentPC = PC;
 }
-
+//instruction execute stage
 void Processor::EXE(){
 	string fromBuffer = IDEXE.get_oldBuff();
 	string readDataOne = fromBuffer.substr(9, 16);
@@ -128,7 +128,7 @@ void Processor::EXE(){
 	string writeToBuff = (controlBits + ALUoutput + ForwardBOutput + regDestMuxOutput);
 	EXEMEM.set_newBuff(writeToBuff);
 }
-
+//MEM Stage
 void Processor::MEM(){
 	string fromBuffer = EXEMEM.get_oldBuff();
 	string regWrite = fromBuffer.substr(0, 1);

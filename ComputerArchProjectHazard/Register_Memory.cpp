@@ -8,7 +8,7 @@
 #include "Unknown.h"
 using namespace std;
 
-
+//class to handle registers.
 Register_Memory::Register_Memory(){
 	for(int i=0; i<8; i++){
 		Memory_Array[i] = "0000000000000000";

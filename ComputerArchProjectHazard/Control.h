@@ -1,10 +1,3 @@
-/* 
- * File:   Control.h
- * Author: Peter
- *
- * Created on April 13, 2015, 2:17 AM
- */
-
 #ifndef CONTROL_H
 #define	CONTROL_H
 

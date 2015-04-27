@@ -7,7 +7,7 @@
 #include "Buffer.h"
 #include "Unknown.h"
 using namespace std;
-
+//class used to handle buffers.
 Buffer::Buffer(){
 	oldBuff = "";
 	newBuff = "";

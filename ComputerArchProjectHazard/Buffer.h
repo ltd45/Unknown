@@ -1,10 +1,3 @@
-/* 
- * File:   Buffer.h
- * Author: Peter
- *
- * Created on April 13, 2015, 2:11 AM
- */
-
 #ifndef BUFFER_H
 #define	BUFFER_H
 

@@ -1,10 +1,3 @@
-/* 
- * File:   Double_Mux.h
- * Author: Peter
- *
- * Created on April 13, 2015, 2:19 AM
- */
-
 #ifndef DOUBLE_MUX_H
 #define	DOUBLE_MUX_H
 

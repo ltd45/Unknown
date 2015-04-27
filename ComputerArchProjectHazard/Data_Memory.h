@@ -1,10 +1,3 @@
-/* 
- * File:   Data_Memory.h
- * Author: Peter
- *
- * Created on April 13, 2015, 2:19 AM
- */
-
 #ifndef DATA_MEMORY_H
 #define	DATA_MEMORY_H
 

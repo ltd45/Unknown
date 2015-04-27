@@ -8,7 +8,7 @@
 #include "Unknown.h"
 using namespace std;
 
-
+//class to simulate Data Memory
 Data_Memory::Data_Memory(){
 	for(int i=0; i<200; i++){
 		Memory_Array[i] = "00000000";

@@ -4,7 +4,7 @@
 #include <map>
 #include <string>
 #include "Unknown.h"
-
+//contains the functions that we needed and didnt make sense to put in any of the other classes.
 using namespace std;
 long int string_to_unsigned(string binString){
 	const char * c = binString.c_str();
@@ -12,7 +12,7 @@ long int string_to_unsigned(string binString){
 	long int myNum = strtol(c, &pEnd, 2);
 	return myNum;
 }
-
+//binary to hex values.
 string bin_to_hex(string binNum){
 	string hexArray[16] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"};
 	string hexOne = hexArray[string_to_unsigned(binNum.substr(0,4))];
@@ -22,7 +22,7 @@ string bin_to_hex(string binNum){
 	string fullHex = hexOne + hexTwo + hexThree + hexFour;
 	return fullHex;
 }
-
+// to change a number into a 3bit number. will only work for values 0-8
 string int_to_three_bit(int myNum){
 	string binNum = "";
 	while(myNum > 0){
@@ -100,7 +100,7 @@ string int_to_string(long int myNum){
 	}
 	
 }
-
+//the ALU module
 string ALU(string A, string B, string control){
 	long int valueA, valueB, result;
 	valueA = string_to_int(A);
@@ -183,7 +183,7 @@ string sign_extend(string binString){
 	return binString;
 }
 
-
+//ssl command.
 string shift_left_one(string binString){
 	string binResult = "0000000000000000";
 	for(int i=0; i<15; i++){

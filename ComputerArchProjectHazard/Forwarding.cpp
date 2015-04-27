@@ -4,7 +4,7 @@
 #include "Forwarding.h"
 
 using namespace std;
-
+//class for forwarding component.
 Forwarding::Forwarding(){
     ForwardAControl = "00";
     ForwardBControl = "00";

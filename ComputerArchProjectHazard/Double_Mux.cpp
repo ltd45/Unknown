@@ -7,7 +7,7 @@
 #include "Double_Mux.h"
 #include "Unknown.h"
 using namespace std;
-
+//double mux class since different from normal mux
 Double_Mux::Double_Mux(){
 	control = "00";
 }

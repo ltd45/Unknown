@@ -1,10 +1,3 @@
-/* 
- * File:   Processor.h
- * Author: Peter
- *
- * Created on April 13, 2015, 2:21 AM
- */
-
 #ifndef PROCESSOR_H
 #define	PROCESSOR_H
 

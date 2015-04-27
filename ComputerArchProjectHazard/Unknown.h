@@ -1,9 +1,3 @@
-/* 
- * File:   Unknown.h
- * Author: Peter
- *
- * Created on April 13, 2015, 2:29 PM
- */
 #include <string>
 
 using namespace std;

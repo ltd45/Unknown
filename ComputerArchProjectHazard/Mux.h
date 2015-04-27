@@ -1,10 +1,3 @@
-/* 
- * File:   Mux.h
- * Author: Peter
- *
- * Created on April 13, 2015, 2:20 AM
- */
-
 #ifndef MUX_H
 #define	MUX_H
 

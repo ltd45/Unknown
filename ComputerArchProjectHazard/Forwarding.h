@@ -1,10 +1,3 @@
-/* 
- * File:   Forwarding.h
- * Author: Peter
- *
- * Created on April 22, 2015, 7:57 PM
- */
-
 #ifndef FORWARDING_H
 #define	FORWARDING_H
 
