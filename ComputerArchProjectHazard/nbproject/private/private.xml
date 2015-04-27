@@ -7,11 +7,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Peter/Documents/NetBeansProjects/ComputerArchProjectHazard/Processor.cpp</file>
-            <file>file:/C:/Users/Peter/Documents/NetBeansProjects/ComputerArchProjectHazard/Unknown.cpp</file>
-            <file>file:/C:/Users/Peter/Documents/NetBeansProjects/ComputerArchProjectHazard/main.cpp</file>
-            <file>file:/C:/Users/Peter/Documents/NetBeansProjects/ComputerArchProjectHazard/Processor.h</file>
-            <file>file:/C:/Users/Peter/Documents/NetBeansProjects/ComputerArchProjectHazard/Instruction_Memory.cpp</file>
+            <file>file:/C:/Users/ltd45_000/Desktop/ComputerArchProjectHazard/Buffer.cpp</file>
+            <file>file:/C:/Users/ltd45_000/Desktop/ComputerArchProjectHazard/Data_Memory.cpp</file>
+            <file>file:/C:/Users/ltd45_000/Desktop/ComputerArchProjectHazard/Instruction_Memory.cpp</file>
+            <file>file:/C:/Users/ltd45_000/Desktop/ComputerArchProjectHazard/main.cpp</file>
+            <file>file:/C:/Users/ltd45_000/Desktop/ComputerArchProjectHazard/Register_Memory.cpp</file>
+            <file>file:/C:/Users/ltd45_000/Desktop/ComputerArchProjectHazard/Forwarding.cpp</file>
+            <file>file:/C:/Users/ltd45_000/Desktop/ComputerArchProjectHazard/Processor.cpp</file>
+            <file>file:/C:/Users/ltd45_000/Desktop/ComputerArchProjectHazard/Unknown.cpp</file>
+            <file>file:/C:/Users/ltd45_000/Desktop/ComputerArchProjectHazard/Double_Mux.cpp</file>
+            <file>file:/C:/Users/ltd45_000/Desktop/ComputerArchProjectHazard/Control.cpp</file>
         </group>
     </open-files>
 </project-private>
